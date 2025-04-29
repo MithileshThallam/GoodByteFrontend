@@ -1,0 +1,105 @@
+/* Ensure the entire page takes up full height and width */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section {
+  height: 100vh; /* Full viewport height */
+  width: 100%;   /* Full width */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Z4cICBVzRCk4Kc6Lpusdu5GZf0ahzSrLAQ&s");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;  /* Ensure full width */
+  height: 100%; /* Ensure full height */
+}
+
+.title {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  animation: zoomIn 1.8s ease-out forwards;
+}
+
+.highlight {
+  color: #FF9900;
+  font-size: 4rem;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  animation: zoomIn 1.8s ease-out forwards;
+}
+
+.auth-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* Ensures the buttons are centered */
+  width: 100%;
+}
+
+.btn {
+  padding: 0.8rem 2rem; /* Ensures there is enough padding inside the button */
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.btn.primary {
+  background-color: #FF9900;
+  color: #000;
+  min-width: 150px; /* Sets a minimum width for the button */
+  border-radius: 30px;
+}
+
+.btn.primary:hover {
+  background-color: #FF9900;
+  transform: scale(1.05);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #FF9900;
+  color: #FF9900;
+  min-width: 150px; /* Sets a minimum width for the button */
+  border-radius: 30px;
+}
+
+.btn.secondary:hover {
+  background-color: #FF9900;
+  color: #000;
+  transform: scale(1.05);
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}

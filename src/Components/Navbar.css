@@ -1,0 +1,63 @@
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+.navbar-left .navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FF9900;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-links a {
+  margin: 0 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #FF9900; /* Highlight color for hover effect */
+}
+
+/* Right-side buttons */
+.navbar-right .btn {
+  margin-left: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  background-color: #FF9900;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-right .btn-outline {
+  background-color: transparent;
+  border: 2px solid #FF9900;
+  color: #FF9900;
+}
+
+.navbar-right .btn:hover {
+  transform: scale(1.05);
+}

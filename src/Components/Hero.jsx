@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom"; 
 
 export default function Hero() {
   return (
@@ -12,8 +13,8 @@ export default function Hero() {
           Bridging hearts and meals — donate or receive food with dignity and ease.
         </p>
         <div className="auth-buttons">
-          <button className="btn primary">Sign Up</button>
-          <button className="btn secondary">Login</button>
+          <Link to="/signup"><button className="btn primary">Sign Up</button></Link>
+          <Link to="/login"><button className="btn secondary">Login</button></Link>
         </div>
       </div>
     </div>

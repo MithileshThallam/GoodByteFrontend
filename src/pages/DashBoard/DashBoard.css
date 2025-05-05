@@ -1,0 +1,84 @@
+.dashboard-background {
+    background-image: url('https://www.eatingwell.com/thmb/088YHsNmHkUQ7iNGP4375MiAXOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_7866255_foods-you-should-eat-every-week-to-lose-weight_-04-d58e9c481bce4a29b47295baade4072d.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dashboard-container {
+    text-align: center;
+    color: white;
+    padding: 40px;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .ngo-badge {
+    background-color: #ff9800;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-card {
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .dashboard-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .donate-card {
+    background-image: url("https://i0.wp.com/www.paramporulfoundation.com/wp-content/uploads/2023/10/How-does-food-donation-or-Nishkayakarma-bring-about-transformation.jpg?fit=788%2C526&ssl=1");
+  }
+  
+  .getfood-card {
+    background-image: url("https://www.trifectanutrition.com/hubfs/food-exchange-guide-for-a-diabetic-menu-food-lists-portion-charts-1.jpg");
+  }
+  
+  .card-content {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;  /* Ensure full width */
+    height: 100%; /* Ensure full height */
+  }
+  

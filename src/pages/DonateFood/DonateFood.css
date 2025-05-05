@@ -1,0 +1,165 @@
+/* General wrapper for the page */
+.donate-food-wrapper {
+    background-image: url('https://www.eatingwell.com/thmb/088YHsNmHkUQ7iNGP4375MiAXOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_7866255_foods-you-should-eat-every-week-to-lose-weight_-04-d58e9c481bce4a29b47295baade4072d.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;  /* Ensure full width */
+    height: 100%; /* Ensure full height */
+  }
+  
+  
+  /* Main container for image + form */
+  .donate-food-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #ffffff;
+    border-left: 6px solid #ff9800;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  /* Left side Image */
+  
+  
+  /* Right side Form */
+  .donate-food-form {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Heading styles */
+  /* .donate-food-form h2 {
+    font-size: 28px;
+    width: 300px;
+    height: 300px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  } */
+  .donate-food-form h2 {
+    font-size: 28px;
+    width: 300px;
+    height: 300px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 25px;
+    margin: 0 auto 20px auto; /* center horizontally */
+    font-weight: bold;
+    text-align: center;
+    display: flex;               /* center text inside the box */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* Form group styling */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-weight: 600;
+    color: #ff9800;
+    font-size: 16px;
+    text-align: left; /* 👈 Add this line */
+  align-self: flex-start; /* 👈 Add this line */
+  }
+  
+  /* Input and Select styling */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect on inputs */
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #ff9800;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    padding: 14px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  /* Button hover effect */
+  .submit-btn:hover {
+    background-color: #e68900;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .donate-food-container {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .donate-food-image {
+      height: 300px; /* Adjust height for mobile */
+      border-radius: 16px 16px 0 0;
+    }
+  
+    .donate-food-form {
+      padding: 20px;
+    }
+  
+    .donate-food-form h2 {
+      font-size: 24px;
+    }
+  
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-size: 14px;
+    }
+  
+    .submit-btn {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link, useNavigate } from "react-router-dom";
+import { signup } from "../../services/authService"; // Adjust path if needed
 import "./Signup.css";
 
 export default function Signup() {
+  const navigate = useNavigate();
   const [userType, setUserType] = useState("user");
   const [formData, setFormData] = useState({
     fullName: "",
@@ -13,7 +15,7 @@ export default function Signup() {
     ngoAddress: "",
   });
 
-  // Handle form input changes
+  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -23,10 +25,22 @@ export default function Signup() {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData); // You can replace this with API call or form validation
-    // Add additional logic for form submission, such as validation
+
+    try {
+      const userPayload = {
+        ...formData,
+        userType,
+      };
+
+      await signup(userPayload);
+      alert("Signup successful!");
+      navigate("/login");
+    } catch (error) {
+      console.error("Signup failed:", error);
+      alert(error.message || "Signup failed. Please try again.");
+    }
   };
 
   return (
@@ -132,13 +146,16 @@ export default function Signup() {
           </>
         )}
 
-        <button type="submit" className="signup-btn">Sign Up</button>
-        <div className="login-link">
-        <p>Already have an account? <Link to="/login">Login here</Link></p>
-      </div>
-      </form>
+        <button type="submit" className="signup-btn">
+          Sign Up
+        </button>
 
-     
+        <div className="login-link">
+          <p>
+            Already have an account? <Link to="/login">Login here</Link>
+          </p>
+        </div>
+      </form>
     </div>
   );
 }

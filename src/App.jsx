@@ -6,7 +6,7 @@ import Signup from './pages/SignUp/SignUp';
 import Login from './pages/LoginPage/Login';
 import Dashboard from './pages/DashBoard/DashBoard';
 import DonateFood from './pages/DonateFood/DonateFood';
-import FoodListPage from './pages/FoodListPage/FoodListPage';
+import GetFood from './pages/FoodListPage/GetFood';
 
 
 
@@ -24,7 +24,7 @@ const App = () => {
   <Route path="/" element={ <HomePage/>} />
   <Route path='/dashboard' element={<Dashboard/>}/>
   <Route path="/donate" element={<DonateFood />} />
-  <Route path='/get-food' element={<FoodListPage/>}/>
+  <Route path='/get-food' element={<GetFood/>}/>
 
 </Routes>
      

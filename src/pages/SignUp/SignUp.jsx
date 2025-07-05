@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signup } from "../../services/authService"; // Adjust path if needed
-import "./Signup.css";
+import "./SignUp.css";
 
 export default function Signup() {
   const navigate = useNavigate();

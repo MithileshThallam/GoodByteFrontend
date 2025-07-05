@@ -2,7 +2,7 @@
 
 export const signup = async (userPayload) => {
     try {
-      const response = await fetch("good-byte-backend.vercel.app/api/auth/signup", {
+      const response = await fetch("https://good-byte-backend.vercel.app/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

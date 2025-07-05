@@ -65,7 +65,7 @@ const DonateFood = () => {
       };
 
       const response = await axios.post(
-        'good-byte-backend.vercel.app/api/food/donate',
+        'https://good-byte-backend.vercel.app/api/food/donate',
         payload,
         {
           headers: {

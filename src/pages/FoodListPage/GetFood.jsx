@@ -10,7 +10,7 @@ const GetFood = () => {
   useEffect(() => {
     const fetchFoodItems = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/food/all");
+        const res = await fetch("good-byte-backend.vercel.app/api/food/all");
         if (!res.ok) throw new Error("Network response was not ok");
         const data = await res.json();
 
